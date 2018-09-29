@@ -1,0 +1,10 @@
+{
+  "name": "min-react-setup",
+  "version": "0.0.1",
+  "description": "Minimal react app setup (Babel, webpack, dev-server, hmr)",
+  "main": "index.js",
+  "repository": "https://github.com/j-d-b/min-react-setup",
+  "author": "j-d-b",
+  "license": "MIT",
+  "private": false
+}
