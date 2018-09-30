@@ -47,17 +47,16 @@ b. `webpack-config.js` specifies the `html-webpack-plugin`, which will inject a 
 
 3. The development server will serve the built application using the configuration set in `webpack-config.js` (http://localhost:5000).
 
-## Production Deploys
+### Production
 ```
 yarn build
 ```
 Bundles and transforms src files with webpack mode set to production. Outputs to `/dist`, which can then by served.
 
-### Recommended additions
+## Recommended additions
 As your project grows, you'll likely want to add some features:
 * Additional webpack loaders (e.g. [`file-loader`](https://github.com/webpack-contrib/file-loader), [`css-loader`](https://github.com/webpack-contrib/css-loader)) *(I often use [styled-components](https://www.styled-components.com/), so I didn't want to include these by default)*
 * A separate `webpack.config.dev.js` and `webpack.config.prod.js` (see https://webpack.js.org/guides/production/)
-* ``
 
 ## Dependencies
 This project only has two client dependencies, `react` and `react-dom`.
