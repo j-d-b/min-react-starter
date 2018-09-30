@@ -55,7 +55,7 @@ Bundles and transforms src files with webpack mode set to production. Outputs to
 
 ## Recommended additions
 As your project grows, you'll likely want to add some features:
-* Additional webpack loaders (e.g. [`file-loader`](https://github.com/webpack-contrib/file-loader), [`css-loader`](https://github.com/webpack-contrib/css-loader)) *(I often use [styled-components](https://www.styled-components.com/), so I didn't want to include these by default)*
+* Additional webpack loaders (e.g. [`file-loader`](https://github.com/webpack-contrib/file-loader), [`css-loader`](https://github.com/webpack-contrib/css-loader), [`style-loader`](https://github.com/webpack-contrib/style-loader)) *(I often use [styled-components](https://www.styled-components.com/), so I didn't want to include these by default)*
 * A separate `webpack.config.dev.js` and `webpack.config.prod.js` (see https://webpack.js.org/guides/production/)
 * Add `historyApiFallback: true` to `devServer` in `webpack.config.js` for true single index.html SPAs.
 
