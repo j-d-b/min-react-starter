@@ -13,7 +13,7 @@ This boilerplate provides:
 * A basic HTML template (for [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin)) and sample favicon
 * A production build script (literally `yarn build`)
 
-In comparison to CRA, I didn't include a bunch of comments in all the config/template code, so you won't have to go remove all those when you're making this your own. The code is still understandable because `min-react-setup` is *less complex* than CRA. This also means it does not include all the the functionality of CRA and *is not* a replacement. I like to understand exactly what it's doing when I run `yarn start`, and want to include only what I use for the cleanest possible setup, adding more webpack loaders and plugins as needed.
+In comparison to CRA, I didn't include a bunch of comments in all the config/template code, so you won't have to go remove all those when you're making this your own. The code is still understandable because `min-react-setup` is *less complex* than CRA. This also means it does not include all the the functionality of CRA and is not a replacement. I like to understand exactly what is happening when I run `yarn start`, and want to include only what I use for the cleanest possible setup, adding more packages and webpack loaders & plugins as needed.
 
 ## Getting Started
 ### Prerequisites
@@ -27,7 +27,7 @@ Install the dependency packages.
 yarn install
 ```
 
-Bundle and transform the input files, start (and open) the development server, and serve the output.
+Bundle and transform the input files (with webpack), start & open the development server, and serve the output.
 ```
 yarn develop
 ```
