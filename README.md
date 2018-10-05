@@ -4,7 +4,7 @@ A fairly minimal React app setup designed to facilitate comprehension of the und
 I wanted a boilerplate for setting up a new React project without the full array of tools and abstractions that come with [`create-react-app`](https://github.com/facebook/create-react-app) (CRA).
 
 ## Inspiration
-Some beginners don't grasp that "React is just JavaScript" because CRA and JSX make it feel like you're working with a magic framework. React is great because it's just a UI library. The aim of this project is to demystify CRA development and give the developer complete understanding, and thus control of the toolchain.
+Some beginners don't grasp that "React is just JavaScript" because CRA and JSX make it feel like you're working with a magic framework. React is great because it's just a UI library. The aim of this project is to demystify React development and give the developer complete understanding, and thus control of the toolchain.
 
 This boilerplate provides:
 * A hot-reloading development server
@@ -13,7 +13,9 @@ This boilerplate provides:
 * A basic HTML template (for [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin)) and sample favicon
 * A production build script (literally `yarn build`)
 
-In comparison to CRA, I didn't include a bunch of comments in all the config/template code, so you won't have to go remove all those when you're making this your own. The code is still understandable because `min-react-setup` is *less complex* than CRA. This also means it does not include all the the functionality of CRA and is not a replacement. I like to understand exactly what is happening when I run `yarn start`, and want to include only what I use for the cleanest possible setup, adding more packages and webpack loaders & plugins as needed.
+Unlike CRA, `min-react-setup` doesn't include a bunch of comments in all the config/template code, so you won't have to go remove all those when you're making this your own. The code is still understandable because `min-react-setup` is *less complex* than CRA. Relatedly, `min-react-setup` does not include all the the functionality of CRA and is not a replacement. 
+
+I like to know exactly what is happening when I run `yarn start` and to faciliate this included only what I considered the cleanest base setup. When I start developing, I add packages and webpack loaders & plugins as needed.
 
 ## Getting Started
 ### Prerequisites
@@ -33,31 +35,31 @@ yarn develop
 ```
 
 ### What's Happening?
-1. `yarn develop` runs the `develop` script in `package.json` (`webpack-dev-server --hot --open --mode development`)
+**First,** `yarn develop` runs the `develop` script in `package.json` (`webpack-dev-server --hot --open --mode development`)
 
 This will use the configuration set in `webpack-config.js`
 
-2. webpack will bundle and transform the input from the `src/index.js` entrypoint (all modules and files `import`ed here) using the loaders and plugins specified in `webpack-config.js`
+**Next,** webpack will bundle and transform the input from the `src/index.js` entrypoint (all modules and files `import`ed here) using the loaders and plugins specified in `webpack-config.js`
 
-We're only using *one loader* and *one plugin* here.
+`min-react-setup` uses only *one loader* and *one plugin*.
 
-a. `webpack-config.js` specifies `babel-loader` which will transform all files with a `.js` extension using the babel configuration set in `.babelrc`.
+`webpack-config.js` specifies `babel-loader` which will transform all files with a `.js` extension using the babel configuration set in `.babelrc`.
 
-b. `webpack-config.js` specifies the `html-webpack-plugin`, which will inject a script tag referencing the bundled JavaScript into the end of the `<body>` specified in `public/index.html`. It will also include a `<link>` to `public/favicon.ico` in the `<head>`.
+`webpack-config.js` specifies the `html-webpack-plugin`, which will inject a script tag referencing the bundled JavaScript into the end of the `<body>` specified in `public/index.html`. It will also include a `<link>` to `public/favicon.ico` in the `<head>`.
 
-3. The development server will serve the built application using the configuration set in `webpack-config.js` (http://localhost:5000).
+**Finally,*** the development server will serve the built application using the configuration set in `webpack-config.js` (http://localhost:5000).
 
 ### Production
 ```
 yarn build
 ```
-Bundles and transforms src files with webpack mode set to production. Outputs to `/dist`, which can then by served.
+Bundles and transforms src files with webpack mode set to production. Outputs to `/dist`, which can then by served (e.g. by a CDN; I like [Netlify](https://www.netlify.com/)).
 
 ## Recommended additions
 As your project grows, you'll likely want to add some features:
 * Additional webpack loaders (e.g. [`file-loader`](https://github.com/webpack-contrib/file-loader), [`css-loader`](https://github.com/webpack-contrib/css-loader), [`style-loader`](https://github.com/webpack-contrib/style-loader)) *(I often use [styled-components](https://www.styled-components.com/), so I didn't want to include these by default)*
 * A separate `webpack.config.dev.js` and `webpack.config.prod.js` (see https://webpack.js.org/guides/production/)
-* Add `historyApiFallback: true` to `devServer` in `webpack.config.js` for true single index.html SPAs.
+* Add `historyApiFallback: true` to `devServer` in `webpack.config.js` for single index.html SPAs using the [History API](https://developer.mozilla.org/en-US/docs/Web/API/History) (which is also used by [React Router](https://github.com/ReactTraining/react-router).
 
 ## Dependencies
 This project only has two client dependencies, `react` and `react-dom`.
