@@ -1,5 +1,5 @@
-# min-react-setup
-A fairly minimal React app setup designed to facilitate comprehension of the underlying tools.
+# min-react-starter
+A fairly minimal React app starter designed to facilitate comprehension of the underlying tools.
 
 I wanted a boilerplate for setting up a new React project without the full array of tools and abstractions that come with [`create-react-app`](https://github.com/facebook/create-react-app) (CRA).
 
@@ -13,7 +13,7 @@ This boilerplate provides:
 * A basic HTML template (for [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin)) and sample favicon
 * A production build script (literally `yarn build`)
 
-Unlike CRA, `min-react-setup` doesn't include a bunch of comments in all the config/template code, so you won't have to go remove all those when you're making this your own. The code is still understandable because `min-react-setup` is *less complex* than CRA. Relatedly, `min-react-setup` does not include all the the functionality of CRA and is not a replacement. 
+Unlike CRA, `min-react-starter` doesn't include a bunch of comments in all the config/template code, so you won't have to go remove all those when you're making this your own. The code is still understandable because `min-react-starter` is *less complex* than CRA. Relatedly, `min-react-starter` does not include all the the functionality of CRA and is not a replacement. 
 
 I like to know exactly what is happening when I run `yarn start` and to faciliate this included only what I considered the cleanest base setup. When I start developing, I add packages and webpack loaders & plugins as needed.
 
@@ -41,7 +41,7 @@ This will use the configuration set in `webpack-config.js`
 
 **Next,** webpack will bundle and transform the input from the `src/index.js` entrypoint (all modules and files `import`ed here) using the loaders and plugins specified in `webpack-config.js`
 
-`min-react-setup` uses only *one loader* and *one plugin*.
+`min-react-starter` uses only *one loader* and *one plugin*.
 
 `webpack-config.js` specifies `babel-loader` which will transform all files with a `.js` extension using the babel configuration set in `.babelrc`.
 
