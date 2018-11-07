@@ -4,7 +4,7 @@
   "description": "Minimal react app setup (Babel, webpack, dev-server, hmr)",
   "scripts": {
     "develop": "webpack-dev-server --hot --open --mode development",
-    "build": "webpack --mode development"
+    "build": "webpack --mode production"
   },
   "main": "src/index.js",
   "repository": "https://github.com/j-d-b/min-react-setup",
