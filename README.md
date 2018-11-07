@@ -47,7 +47,7 @@ This will use the configuration set in `webpack-config.js`
 
 `webpack-config.js` specifies the `html-webpack-plugin`, which will inject a script tag referencing the bundled JavaScript into the end of the `<body>` specified in `public/index.html`. It will also include a `<link>` to `public/favicon.ico` in the `<head>`.
 
-**Finally,*** the development server will serve the built application using the configuration set in `webpack-config.js` (http://localhost:5000).
+**Finally,** the development server will serve the built application using the configuration set in `webpack-config.js` (http://localhost:5000).
 
 ### Production
 ```
