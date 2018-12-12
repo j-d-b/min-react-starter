@@ -71,7 +71,7 @@ As your project grows, you'll likely want to add some features:
 This project only has two client dependencies, `react` and `react-dom`.
 
 For the toolchain, we also need:
-* Babel (`@babel/core`, `@babel/corepreset-env`, `@babel/corepreset-react`, `babel-loader`)
+* Babel (`@babel/core`, `@babel/preset-env`, `@babel/preset-react`, `babel-loader`)
 * `webpack` and `webpack-dev-server` (and `webpack-cli`)
 * `html-webpack-plugin`
 
