@@ -24,6 +24,12 @@ The following sections assume you have the following installed:
 * [Yarn](https://yarnpkg.com/en/) package manager
 
 ## Usage
+Clone the repository
+```
+git clone https://github.com/j-d-b/min-react-starter my-new-project
+cd my-new-project
+```
+
 Install the dependency packages.
 ```
 yarn install
