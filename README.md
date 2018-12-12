@@ -59,7 +59,7 @@ This will use the configuration set in `webpack-config.js`
 ```
 yarn build
 ```
-Bundles and transforms src files with webpack mode set to production. Outputs to `/dist`, which can then by served (e.g. by a CDN; I like [Netlify](https://www.netlify.com/)).
+Bundles and transforms `src` files with webpack mode set to production. Outputs to `/dist`, which can then be served.
 
 ## Recommended additions
 As your project grows, you'll likely want to add some features:
